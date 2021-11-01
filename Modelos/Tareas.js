@@ -2,7 +2,7 @@ const mongoose = require ('mongoose')
 	let TareaSchema = new mongoose.Schema({
          idTarea: Number,
          TipodocTarea: String,
-         docid: Number,
+         numerodocTarea: Number,
          nombreTarea: String
 	
 	});
