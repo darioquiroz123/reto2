@@ -17,7 +17,7 @@ router.get('/', (req,res)=> {
 router.post('/tarea',(req, res)=>{
     let nuevaTarea = new TareaSchema({
        idTarea: req.body.id,
-       tipodocTarea:req.body.tipodoc,
+       numerodocTarea:req.body.numerodoc,
        docidTarea: req.body.docid,
        nombreTarea: req.body.nombre
         
