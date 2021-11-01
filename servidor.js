@@ -13,7 +13,25 @@ mongoose.connect("mongodb+srv://prog_web:ProgWebMintic2022@cluster0.od7lu.mongod
 router.get('/', (req,res)=> {
     res.send("El inicio de la Api Rest")
 });
+// metodos post
+router.post('/tarea',(req, res)=>{
+    let nuevaTarea = new TareaSchema({
+       idTarea: req.body.id,
+       tipodocTarea:req.body.tipodoc,
+       docidTarea: req.body.docid,
+       nombreTarea: req.body.nombre
+        
+    });
 
+    nuevaTarea.save(function(err, datos){
+        if (err){
+            console.log(err);
+    }
+    res.send("usuario Almacenado")
+ 
+    })
+});
+app.use(router);
 app.listen(3000, () => {
     console.log("El servidor se esta ejecutando en el puerto 3000")
-            });
+});
