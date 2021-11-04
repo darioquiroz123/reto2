@@ -16,10 +16,16 @@ router.get('/', (req,res)=> {
 // metodos post
 router.post('/tarea',(req, res)=>{
     let nuevaTarea = new TareaSchema({
-       idTarea: req.body.id,
-       numerodocTarea:req.body.numerodoc,
-       docidTarea: req.body.docid,
-       nombreTarea: req.body.nombre
+        TipoDocumento: req.body.tipodoc,
+        DocumentoIdentificación: req.body.id,
+        Nombres: req.body.nombre,
+        Apellidos : req.body.apellido,
+        Dirección: req.body.direccion,
+        CorreoElectrónico: req.body.correo,
+        TeléfonoFijo: req.body.telefonoF,
+        TeléfonoCelular: req.body.telefonoC,
+        EnlaceSitioWeb: req.body.enlace,
+        DescripciónDelPerfil: req.body.descripcion
         
     });
 
